@@ -3,9 +3,9 @@ package com.example.demo.dto;
 import java.time.LocalDate;
 
 
-
 public class UserUpdateRequest {
     //DTO là một lớp trung gian giữa mapping Entity cho các Service hoặc Repository xử lý
+    //DTO chọn ra các thuộc tính của Entity cần lấy mà ko nhất thiết tất cả
     //Không cần lấy id vì do đã generated sẵn dạng UUID rồi
     //private String id;
     private String username;

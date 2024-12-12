@@ -17,6 +17,8 @@ import com.example.demo.dto.UserUpdateRequest;
 import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
 
+import jakarta.validation.Valid;
+
 @RestController
 //@RequestMapping("/users")    //Neu xoa thi trong cac method phai tu dat Endpoint rieng bang @Pos/GetMapping
 public class UserController {
@@ -26,7 +28,7 @@ public class UserController {
 
     @PostMapping("/post")
     //Dua thong tin vao va tao user
-    User createUser(@RequestBody UserCreationRequest request){
+    User createUser(@RequestBody @Valid UserCreationRequest request){
         return userService.createRequest(request);
     }
 
