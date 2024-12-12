@@ -7,5 +7,9 @@ import com.example.demo.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, String>{
-    boolean checkExistUsername(String username);
+    //findBy: Truy vấn dựa trên các thuộc tính Entity
+    //countBy: Đếm số lượng Entity thỏa mãn điều kiện
+    //deleteBy: Xóa các entity thỏa đk
+    //existsBy: kiểm tra sự tồn tại của các entity
+    boolean existsByUsername(String username); //Phải là existBy + thỏa mãn điều kiện của Entity
 }

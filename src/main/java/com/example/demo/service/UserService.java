@@ -22,9 +22,9 @@ public class UserService {
         User user=new User();
 
         //Kiểm tra username có tồn tại không?
-        if (userRepository.checkExistUsername(request.getUsername())) {
+        if (userRepository.existsByUsername(request.getUsername())) 
             throw new RuntimeException("User đã tồn tại!");
-        }
+        
 
         user.setUsername(request.getUsername());
         user.setPassword(request.getPassword());
